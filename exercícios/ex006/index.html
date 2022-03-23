@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      .imagem {
+        height: 400px;
+      }
+
+      button {
+        width: 100px;
+        height: 50px;
+      }
+
+      .texto {
+        margin-top: 100px;
+        height: 500px;
+        width: 200px;
+        padding: 20px;
+        overflow: auto;
+        background-color: #c1c1c1;
+      }
+    </style>
+  </head>
+  <body>
+    <img src="images/cachorro.webp" data-animal="Cachorro" class="imagem" />
+
+    <div>
+      <button onclick="trocarAnimal('cachorro.webp', 'Cachorro')">
+        Cachorro
+      </button>
+      <button onclick="trocarAnimal('gato.webp', 'Gato')">Gato</button>
+      <button onclick="pegarAnimal()">Qual é o animal?</button>
+    </div>
+
+    <script type="text/javascript" src="script.js"></script>
+  </body>
+</html>

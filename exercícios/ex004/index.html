@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/425e42a5e1.js" crossorigin="anonymous"></script>
+    <title>Document</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins&family=Ubuntu&display=swap');
+
+        * {
+            color: white;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        #box {
+            width: 100%;
+            height: 100%;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.192);
+            transition: background-color 0.5s;
+        }
+
+        .principal {
+            width: 500px;
+            height: 500px;
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            margin-bottom: 50px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .overlay {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+
+            text-align: center;
+            text-transform: uppercase;
+
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            width: 100%;
+            height: 100%;
+
+            cursor:default;
+            opacity: 1;
+            transition: opacity 0.3s;
+        }
+
+        .overlay:hover {
+            opacity: 0;
+        }
+
+        #nomecor {
+            position: absolute;
+            bottom: 50px;
+
+            display: flex;
+            justify-content: center;
+
+            background: linear-gradient(to bottom, #fcfafa18, rgba(255, 255, 255, 0.226)) ;
+            padding: 10px 20px;
+            border-radius: 20px;
+
+            text-align: center;
+        }
+
+        .yellow {
+            background-color: #F9C80E;
+        }
+
+        .orange {
+            background-color: #F86624;
+        }
+
+        .red {
+            background-color: #EA3546;
+        }
+
+        .purple {
+            background-color: #662E9B;
+        }
+
+        .blue {
+            background-color: #43BCCD;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 1em;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.192);
+            text-transform: uppercase;
+        }
+
+        #btn {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+        .darkmode, .whitemode {
+            transition: background-color 0.5s;
+        }
+
+        .darkmode {
+            background-color: black;
+        }
+
+        .whitemode {
+            background-color: #d3d3d3;
+        }
+
+    </style>
+</head>
+<body class="whitemode">
+
+    <div>
+        <button id="btn" class="whitemode" onclick="trocar()">Light Mode</button>
+    </div>
+    
+    <div class="principal">
+        <div id="box" class="yellow">
+
+        </div>
+        <div class="overlay">
+            <h1>see your<br>color here</h1>
+            <i class="fa-solid fa-brush" style="font-size: 2em;"></i>
+        </div>
+        <span id="nomecor">#F9C80E</span>
+    </div>
+    <div>
+        <button class="yellow" onclick="yellow()">Yellow</button>
+        <button class="orange" onclick="orange()">Orange</button>
+        <button class="red" onclick="red()">Red</button>
+        <button class="purple" onclick="purple()">Purple</button>
+        <button class="blue" onclick="blue()">Blue</button>
+    </div>
+
+    
+
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
