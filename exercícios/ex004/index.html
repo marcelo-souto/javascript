@@ -23,6 +23,8 @@
             height: 100vh;
             margin: 0;
             font-family: 'Poppins', sans-serif;
+            background-color: #d3d3d3;
+            transition: background-color 0.5s;
         }
 
         #box {
@@ -117,6 +119,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
+            background-color: #d3d3d3;
         }
 
         .darkmode, .whitemode {
@@ -124,19 +127,15 @@
         }
 
         .darkmode {
-            background-color: black;
-        }
-
-        .whitemode {
-            background-color: #d3d3d3;
+            background-color: black !important;
         }
 
     </style>
 </head>
-<body class="whitemode">
+<body onkeyup="changeColorBox(event)">
 
     <div>
-        <button id="btn" class="whitemode" onclick="trocar()">Light Mode</button>
+        <button id="btn"  onclick="changeColorMode(this)">Light Mode</button>
     </div>
     
     <div class="principal">

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Switch, For Loop, For Loop Array e While</title>
+  </head>
+  <body>
+
+    <h1>Switch</h1>
+    <pre>
+        <code>
+            let dia = 7;
+        let diaNome = "";
+        
+        switch (dia) {
+          case 1:
+        diaNome = "Segunda-feira";
+        break;
+          case 2:
+        diaNome = "Terca-feira";
+        break;
+          case 3:
+        diaNome = "Quarta-feira";
+        break;
+          case 4:
+        diaNome = "Quinta-feira";
+        break;
+          case 5:
+        diaNome = "Sexta-feira";
+        break;
+          case 6:
+        diaNome = "Sabado";
+        break;
+          case 7:
+        diaNome = "Domingo";
+        break;
+        }
+        
+        document.querySelector('#dia').innerHTML = 'Hoje é ' + diaNome;
+        </code>
+    </pre>
+
+    <div id="dia" style="font-size: 2em; font-weight: bold"></div>
+
+    <hr />
+
+    <h1>For Loop</h1>
+    <pre>
+    <code>
+        let texto ='';
+        for(let i = 0; i <= 10; i++) {
+        texto += i + '&lt;br&gt;'
+        }
+        document.getElementById('demo').innerHTML = texto;
+    </code>
+    </pre>
+
+    <div id="demo" style="font-size: 2em; font-weight: bold"></div>
+
+    <hr>
+
+    <h1>For Loop Array</h1>
+    <pre><code>
+        let ingredientes = ['Ovo', 'Farinha', 'Fermento', 'Manteiga', 'Cenoura'];
+
+        let html = '&lt;ul&gt;';
+
+        for(let ingrediente in ingredientes) {
+        html = html + '&lt;li&gt;' + ingredientes[ingrediente] + '&lt;/li&gt;';
+        }
+
+        html = html + '&lt;/ul&gt;';
+
+        document.getElementById('demo2').innerHTML = html;
+    </code></pre>
+    <div id="demo2" style="font-size: 2em; font-weight: bold"></div>
+
+    <hr>
+
+    <h1>While</h1>
+    <pre><code>
+        let html2 = '';
+
+        let c = 1;
+        while ( c <= 10) {
+        html2 = html2 + 'Numero é: '+c+'&lt;br&gt;';
+        c++;
+        }
+    </code></pre>
+    <div id="demo3" style="font-size: 2em; font-weight: bold"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
