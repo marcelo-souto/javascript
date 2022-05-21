@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: 'Rubik';
+}
+
+.header {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d4297;
+}
+
+.logo {
+    height: 40px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(131deg) brightness(103%) contrast(101%);
+}
+
+.slider {
+    overflow: hidden;
+    position: relative;
+    margin: 0 auto;
+}
+
+.slider--width {
+    height: 100%;
+    display: flex;
+    transition: all ease .5s;
+}
+
+.slider--item {
+    width: 100vw;
+    height: inherit;
+    background-position: center !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.layer {
+    background: linear-gradient(to top, #000000, #000000be, #00000000);
+    height: 33%;
+    padding: 30px 30px 0px 30px;
+}
+
+.slider--item .title {
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.slider--item .description {
+    color: #fff;
+    font-size: 20px;
+}
+
+
+.slider--control i {
+    color: #ffffff7d;
+    font-size: max(3vw,30px);
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.slider--control:nth-child(1) {
+    position: absolute;
+    top: 50%;
+    left: 4%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.slider--control:nth-child(2) {
+    position: absolute;
+    top: 50%;
+    left: 96%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+}
+
+.slider--control i:hover {
+    color: #ffffffcc;
+}
+
+.slider--dots {
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%)
+    
+}
+
+.slider--dot {
+    color: #ffffff9e;
+    font-size: max(1vw,6px);
+    cursor: pointer;
+    transition: color .3s;
+}
+
+.marked {
+    color: #ffffffee;
+}
+
+.content {
+    height: 100vh;
+    background-color: #000;
+}
